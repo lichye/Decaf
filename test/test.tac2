@@ -1,0 +1,440 @@
+_PrintArray:
+	BeginFunc 84 ;
+	_tmp0 = 0 ;
+	i = _tmp0 ;
+	_tmp1 = "Sorted results: " ;
+	PushParam _tmp1 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+_L0:
+	_tmp2 = *(arr + -4) ;
+	_tmp3 = i < _tmp2 ;
+	IfZ _tmp3 Goto _L1 ;
+	_tmp4 = 0 ;
+	_tmp5 = i < _tmp4 ;
+	_tmp6 = *(arr + -4) ;
+	_tmp7 = i < _tmp6 ;
+	_tmp8 = _tmp7 == _tmp4 ;
+	_tmp9 = _tmp5 || _tmp8 ;
+	IfZ _tmp9 Goto _L2 ;
+	_tmp10 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp10 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L2:
+	_tmp11 = 4 ;
+	_tmp12 = _tmp11 * i ;
+	_tmp13 = arr + _tmp12 ;
+	_tmp14 = *(_tmp13) ;
+	PushParam _tmp14 ;
+	LCall _PrintInt ;
+	PopParams 4 ;
+	_tmp15 = " " ;
+	PushParam _tmp15 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	_tmp16 = 1 ;
+	_tmp17 = i + _tmp16 ;
+	i = _tmp17 ;
+	Goto _L0 ;
+_L1:
+	_tmp18 = "\n" ;
+	PushParam _tmp18 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	EndFunc ;
+main:
+	BeginFunc 596 ;
+	_tmp19 = 5 ;
+	_tmp20 = 1 ;
+	_tmp21 = _tmp19 < _tmp20 ;
+	IfZ _tmp21 Goto _L3 ;
+	_tmp22 = "Decaf runtime error: Array size is <= 0\n" ;
+	PushParam _tmp22 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L3:
+	_tmp23 = 1 ;
+	_tmp24 = _tmp23 + _tmp19 ;
+	_tmp25 = 4 ;
+	_tmp26 = _tmp24 * _tmp25 ;
+	PushParam _tmp26 ;
+	_tmp27 = LCall _Alloc ;
+	PopParams 4 ;
+	*(_tmp27) = _tmp19 ;
+	_tmp28 = _tmp27 + _tmp25 ;
+	arr = _tmp28 ;
+	_tmp29 = 0 ;
+	_tmp30 = 0 ;
+	_tmp31 = _tmp29 < _tmp30 ;
+	_tmp32 = *(arr + -4) ;
+	_tmp33 = _tmp29 < _tmp32 ;
+	_tmp34 = _tmp33 == _tmp30 ;
+	_tmp35 = _tmp31 || _tmp34 ;
+	IfZ _tmp35 Goto _L4 ;
+	_tmp36 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp36 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L4:
+	_tmp37 = 4 ;
+	_tmp38 = _tmp37 * _tmp29 ;
+	_tmp39 = arr + _tmp38 ;
+	_tmp40 = 5 ;
+	*(_tmp39) = _tmp40 ;
+	_tmp41 = 1 ;
+	_tmp42 = 0 ;
+	_tmp43 = _tmp41 < _tmp42 ;
+	_tmp44 = *(arr + -4) ;
+	_tmp45 = _tmp41 < _tmp44 ;
+	_tmp46 = _tmp45 == _tmp42 ;
+	_tmp47 = _tmp43 || _tmp46 ;
+	IfZ _tmp47 Goto _L5 ;
+	_tmp48 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp48 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L5:
+	_tmp49 = 4 ;
+	_tmp50 = _tmp49 * _tmp41 ;
+	_tmp51 = arr + _tmp50 ;
+	_tmp52 = 90 ;
+	*(_tmp51) = _tmp52 ;
+	_tmp53 = 2 ;
+	_tmp54 = 0 ;
+	_tmp55 = _tmp53 < _tmp54 ;
+	_tmp56 = *(arr + -4) ;
+	_tmp57 = _tmp53 < _tmp56 ;
+	_tmp58 = _tmp57 == _tmp54 ;
+	_tmp59 = _tmp55 || _tmp58 ;
+	IfZ _tmp59 Goto _L6 ;
+	_tmp60 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp60 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L6:
+	_tmp61 = 4 ;
+	_tmp62 = _tmp61 * _tmp53 ;
+	_tmp63 = arr + _tmp62 ;
+	_tmp64 = 100 ;
+	*(_tmp63) = _tmp64 ;
+	_tmp65 = 3 ;
+	_tmp66 = 0 ;
+	_tmp67 = _tmp65 < _tmp66 ;
+	_tmp68 = *(arr + -4) ;
+	_tmp69 = _tmp65 < _tmp68 ;
+	_tmp70 = _tmp69 == _tmp66 ;
+	_tmp71 = _tmp67 || _tmp70 ;
+	IfZ _tmp71 Goto _L7 ;
+	_tmp72 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp72 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L7:
+	_tmp73 = 4 ;
+	_tmp74 = _tmp73 * _tmp65 ;
+	_tmp75 = arr + _tmp74 ;
+	_tmp76 = 80 ;
+	*(_tmp75) = _tmp76 ;
+	_tmp77 = 4 ;
+	_tmp78 = 0 ;
+	_tmp79 = _tmp77 < _tmp78 ;
+	_tmp80 = *(arr + -4) ;
+	_tmp81 = _tmp77 < _tmp80 ;
+	_tmp82 = _tmp81 == _tmp78 ;
+	_tmp83 = _tmp79 || _tmp82 ;
+	IfZ _tmp83 Goto _L8 ;
+	_tmp84 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp84 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L8:
+	_tmp85 = 4 ;
+	_tmp86 = _tmp85 * _tmp77 ;
+	_tmp87 = arr + _tmp86 ;
+	_tmp88 = 59 ;
+	*(_tmp87) = _tmp88 ;
+	_tmp89 = 1 ;
+	i = _tmp89 ;
+_L9:
+	_tmp90 = *(arr + -4) ;
+	_tmp91 = i < _tmp90 ;
+	IfZ _tmp91 Goto _L10 ;
+	_tmp92 = 1 ;
+	_tmp93 = i - _tmp92 ;
+	j = _tmp93 ;
+	_tmp94 = 0 ;
+	_tmp95 = i < _tmp94 ;
+	_tmp96 = *(arr + -4) ;
+	_tmp97 = i < _tmp96 ;
+	_tmp98 = _tmp97 == _tmp94 ;
+	_tmp99 = _tmp95 || _tmp98 ;
+	IfZ _tmp99 Goto _L11 ;
+	_tmp100 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp100 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L11:
+	_tmp101 = 4 ;
+	_tmp102 = _tmp101 * i ;
+	_tmp103 = arr + _tmp102 ;
+	_tmp104 = *(_tmp103) ;
+	val = _tmp104 ;
+_L12:
+	_tmp105 = 0 ;
+	_tmp106 = _tmp105 < j ;
+	_tmp107 = j == _tmp105 ;
+	_tmp108 = _tmp106 || _tmp107 ;
+	IfZ _tmp108 Goto _L13 ;
+	_tmp109 = 0 ;
+	_tmp110 = j < _tmp109 ;
+	_tmp111 = *(arr + -4) ;
+	_tmp112 = j < _tmp111 ;
+	_tmp113 = _tmp112 == _tmp109 ;
+	_tmp114 = _tmp110 || _tmp113 ;
+	IfZ _tmp114 Goto _L15 ;
+	_tmp115 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp115 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L15:
+	_tmp116 = 4 ;
+	_tmp117 = _tmp116 * j ;
+	_tmp118 = arr + _tmp117 ;
+	_tmp119 = *(_tmp118) ;
+	_tmp120 = _tmp119 < val ;
+	_tmp121 = val == _tmp119 ;
+	_tmp122 = _tmp120 || _tmp121 ;
+	IfZ _tmp122 Goto _L14 ;
+	Goto _L13 ;
+_L14:
+	_tmp123 = 1 ;
+	_tmp124 = j + _tmp123 ;
+	_tmp125 = 0 ;
+	_tmp126 = _tmp124 < _tmp125 ;
+	_tmp127 = *(arr + -4) ;
+	_tmp128 = _tmp124 < _tmp127 ;
+	_tmp129 = _tmp128 == _tmp125 ;
+	_tmp130 = _tmp126 || _tmp129 ;
+	IfZ _tmp130 Goto _L16 ;
+	_tmp131 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp131 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L16:
+	_tmp132 = 4 ;
+	_tmp133 = _tmp132 * _tmp124 ;
+	_tmp134 = arr + _tmp133 ;
+	_tmp135 = 0 ;
+	_tmp136 = j < _tmp135 ;
+	_tmp137 = *(arr + -4) ;
+	_tmp138 = j < _tmp137 ;
+	_tmp139 = _tmp138 == _tmp135 ;
+	_tmp140 = _tmp136 || _tmp139 ;
+	IfZ _tmp140 Goto _L17 ;
+	_tmp141 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp141 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L17:
+	_tmp142 = 4 ;
+	_tmp143 = _tmp142 * j ;
+	_tmp144 = arr + _tmp143 ;
+	_tmp145 = *(_tmp144) ;
+	*(_tmp134) = _tmp145 ;
+	_tmp146 = 1 ;
+	_tmp147 = j - _tmp146 ;
+	j = _tmp147 ;
+	Goto _L12 ;
+_L13:
+	_tmp148 = 1 ;
+	_tmp149 = j + _tmp148 ;
+	_tmp150 = 0 ;
+	_tmp151 = _tmp149 < _tmp150 ;
+	_tmp152 = *(arr + -4) ;
+	_tmp153 = _tmp149 < _tmp152 ;
+	_tmp154 = _tmp153 == _tmp150 ;
+	_tmp155 = _tmp151 || _tmp154 ;
+	IfZ _tmp155 Goto _L18 ;
+	_tmp156 = "Decaf runtime error: Array subscript out of bound..." ;
+	PushParam _tmp156 ;
+	LCall _PrintString ;
+	PopParams 4 ;
+	LCall _Halt ;
+_L18:
+	_tmp157 = 4 ;
+	_tmp158 = _tmp157 * _tmp149 ;
+	_tmp159 = arr + _tmp158 ;
+	*(_tmp159) = val ;
+	_tmp160 = 1 ;
+	_tmp161 = i + _tmp160 ;
+	i = _tmp161 ;
+	Goto _L9 ;
+_L10:
+	PushParam arr ;
+	LCall _PrintArray ;
+	PopParams 4 ;
+	EndFunc ;
+  _PrintInt:
+	  subu $sp, $sp, 8	# decrement sp to make space to save ra,fp
+	  sw $fp, 8($sp)	# save fp
+	  sw $ra, 4($sp)	# save ra
+	  addiu $fp, $sp, 8	# set up new fp
+	  lw $a0, 4($fp)	# fill a from $fp+4
+	# LCall _PrintInt
+	  li $v0, 1
+	  syscall
+	# EndFunc
+	# (below handles reaching end of fn body with no explicit return)
+	  move $sp, $fp		# pop callee frame off stack
+	  lw $ra, -4($fp)	# restore saved ra
+	  lw $fp, 0($fp)	# restore saved fp
+	  jr $ra		# return from function
+
+  _ReadInteger:
+	  subu $sp, $sp, 8	# decrement sp to make space to save ra,fp
+	  sw $fp, 8($sp)	# save fp
+	  sw $ra, 4($sp)	# save ra
+	  addiu $fp, $sp, 8	# set up new fp
+	  li $v0, 5
+	  syscall
+	# EndFunc
+	# (below handles reaching end of fn body with no explicit return)
+	  move $sp, $fp		# pop callee frame off stack
+	  lw $ra, -4($fp)	# restore saved ra
+	  lw $fp, 0($fp)	# restore saved fp
+	  jr $ra		# return from function
+
+
+  _PrintBool:
+	  subu $sp, $sp, 8      # decrement sp to make space to save ra, fp
+	  sw $fp, 8($sp)        # save fp
+	  sw $ra, 4($sp)        # save ra
+	  addiu $fp, $sp, 8     # set up new fp
+	  lw $a0, 4($fp)        # fill a from $fp+4
+	  li $v0, 4
+	  beq $a0, $0, PrintBoolFalse
+	  la $a0, _PrintBoolTrueString
+	  j PrintBoolEnd
+  PrintBoolFalse:
+ 	  la $a0, _PrintBoolFalseString
+  PrintBoolEnd:
+	  syscall
+	# EndFunc
+	# (below handles reaching end of fn body with no explicit return)
+	  move $sp, $fp         # pop callee frame off stack
+	  lw $ra, -4($fp)       # restore saved ra
+	  lw $fp, 0($fp)        # restore saved fp
+	  jr $ra                # return from function
+
+      .data			# create string constant marked with label
+      _PrintBoolTrueString: .asciiz "true"
+      .text
+
+      .data			# create string constant marked with label
+      _PrintBoolFalseString: .asciiz "false"
+      .text
+
+  _PrintString:
+	  subu $sp, $sp, 8      # decrement sp to make space to save ra, fp
+	  sw $fp, 8($sp)        # save fp
+	  sw $ra, 4($sp)        # save ra
+	  addiu $fp, $sp, 8     # set up new fp
+	  lw $a0, 4($fp)        # fill a from $fp+4
+	  li $v0, 4
+	  syscall
+	# EndFunc
+	# (below handles reaching end of fn body with no explicit return)
+	  move $sp, $fp         # pop callee frame off stack
+	  lw $ra, -4($fp)       # restore saved ra
+	  lw $fp, 0($fp)        # restore saved fp
+	  jr $ra                # return from function
+
+  _Alloc:
+	  subu $sp, $sp, 8      # decrement sp to make space to save ra,fp
+	  sw $fp, 8($sp)        # save fp
+	  sw $ra, 4($sp)        # save ra
+	  addiu $fp, $sp, 8     # set up new fp
+	  lw $a0, 4($fp)        # fill a from $fp+4
+	  li $v0, 9
+	  syscall
+	# EndFunc
+	# (below handles reaching end of fn body with no explicit return)
+	  move $sp, $fp         # pop callee frame off stack
+	  lw $ra, -4($fp)       # restore saved ra
+	  lw $fp, 0($fp)        # restore saved fp
+	  jr $ra                # return from function
+
+  _Halt:
+	  li $v0, 10
+	  syscall
+	# EndFunc
+
+
+  _StringEqual:
+	  subu $sp, $sp, 8      # decrement sp to make space to save ra, fp
+	  sw $fp, 8($sp)        # save fp
+	  sw $ra, 4($sp)        # save ra
+	  addiu $fp, $sp, 8     # set up new fp
+	  lw $a0, 4($fp)        # fill a from $fp+4
+	  lw $a1, 8($fp)        # fill a from $fp+8
+	  beq $a0,$a1,Lrunt10
+  Lrunt12:
+	  lbu  $v0,($a0)
+	  lbu  $a2,($a1)
+	  bne $v0,$a2,Lrunt11
+	  addiu $a0,$a0,1
+	  addiu $a1,$a1,1
+	  bne $v0,$0,Lrunt12
+      li  $v0,1
+      j Lrunt10
+  Lrunt11:
+	  li  $v0,0
+  Lrunt10:
+	# EndFunc
+	# (below handles reaching end of fn body with no explicit return)
+	  move $sp, $fp         # pop callee frame off stack
+	  lw $ra, -4($fp)       # restore saved ra
+	  lw $fp, 0($fp)        # restore saved fp
+	  jr $ra                # return from function
+
+
+
+  _ReadLine:
+	  subu $sp, $sp, 8      # decrement sp to make space to save ra, fp
+	  sw $fp, 8($sp)        # save fp
+	  sw $ra, 4($sp)        # save ra
+	  addiu $fp, $sp, 8     # set up new fp
+	  li $a0, 101
+	  li $v0, 9
+	  syscall
+	  addi $a0, $v0, 0
+	  li $v0, 8
+	  li $a1,101 
+	  syscall
+	  addiu $v0,$a0,0       # pointer to begin of string
+  Lrunt21:
+	  lb $a1,($a0)          # load character at pointer
+	  addiu $a0,$a0,1       # forward pointer
+	  bnez $a1,Lrunt21      # loop until end of string is reached
+	  lb $a1,-2($a0)        # load character before end of string
+	  li $a2,10             # newline character	  bneq $a1,$a2,Lrunt20  # do not remove last character if not newline
+	  sb $0,-2($a0)         # Add the terminating character in its place
+  Lrunt20:
+	# EndFunc
+	# (below handles reaching end of fn body with no explicit return)
+	  move $sp, $fp         # pop callee frame off stack
+	  lw $ra, -4($fp)       # restore saved ra
+	  lw $fp, 0($fp)        # restore saved fp
+	  jr $ra                # return from function

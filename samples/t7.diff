@@ -1,0 +1,13 @@
+1,4c1,6
+< Loaded: /afs/umich.edu/user/c/h/chhsiao/Public/spim-install/exceptions.s
+< spots: true    height: 5
+< Stats -- #instructions : 233
+<          #reads : 59  #writes 50  #branches 24  #other 100
+---
+> SPIM Version 8.0 of January 8, 2010
+> Copyright 1990-2010, James R. Larus.
+> All Rights Reserved.
+> See the file README for a full copyright notice.
+> Loaded: /usr/lib/spim/exceptions.s
+> spots: true    height: 5
+\ No newline at end of file
